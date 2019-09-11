@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- 学生可通过平台定义自己的学习计划，平台会根据学生的特性向学生推荐学期学习计划方案。学生可直接选择平台推荐的计划，平台会根据计划定期提醒学生，学期结束将会出具学习计划报告，分析学生计划完成情况。 -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>学习计划</title>
+<link rel="stylesheet" href="../../../layui/css/layui.css" media="all">
+</head>
+<body>
+<form class="layui-form">
+  <div class="layui-form-item">
+    <label class="layui-form-label">定义计划名称</label>
+    <div class="layui-input-block">
+      <input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">选择推荐计划</label>
+    <div class="layui-input-block">
+      <select name="interest" lay-filter="aihao">
+        <option value="0">推荐计划1</option>
+        <option value="1">推荐计划2</option>
+      </select>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">选择需求</label>
+    <div class="layui-input-block">
+      <input type="checkbox" name="like[write]" title="定期提醒">
+      <input type="checkbox" name="like[read]" title="学习计划报告">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">短信上课提醒</label>
+    <div class="layui-input-block">
+      <input type="checkbox" lay-skin="switch">
+    </div>
+  <div class="layui-form-item layui-form-text">
+    <label class="layui-form-label">请填写学习计划描述</label>
+    <div class="layui-input-block">
+      <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form>
+<script src="../../../layui/layui.js"></script>
+<script>
+layui.use('form', function(){
+  var form = layui.form;
+});
+</script>
+</body>
+</html>
